@@ -1,4 +1,3 @@
-echo "Welcome To The Sorting Arithmetic Computation Problem"
 echo "Welcome to the Sorting Arithmetic"
 read -p "Enter a first number: " a
 read -p "Enter b first number: " b
@@ -15,11 +14,16 @@ value[1]="$temp1"
 value[2]="$temp2"
 value[3]="$temp3"
 value[4]="$temp4"
-echo "Store into the Dictionary 1 compution :"${value[1]}
-echo "Store into the Dictionary 2 compution :"${value[2]}
-echo "Store into the Dictionary 3 compution :"${value[3]}
-echo "Store into the Dictionary 4 Operation :"${value[4]}
+
 counter=${value[@]}
 
-Fruits=($counter)
-echo "Read the values from the Dictionary into the array : "${Fruits[*]}
+temp=($counter)
+variable=${temp[*]}
+echo $variable
+
+for i in $( echo "$variable" | tr ' ' '\n' | sort -nr )
+do
+
+  echo  $i
+done
+
