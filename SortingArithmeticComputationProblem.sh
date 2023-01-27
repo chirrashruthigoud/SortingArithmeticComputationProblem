@@ -20,10 +20,10 @@ counter=${value[@]}
 temp=($counter)
 variable=${temp[*]}
 echo $variable
-
-for i in $( echo "$variable" | tr ' ' '\n' | sort -nr )
+echo "Ascending Order :-"
+for i in $( echo "$variable" | tr ' ' '\n' | sort -n )
 do
-
-  echo  $i
+  
+  echo $i
 done
 
